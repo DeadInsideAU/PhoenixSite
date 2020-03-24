@@ -9,9 +9,15 @@ body {
 	padding: 0;
 	width: 100%;
 	height: 100%;
-	background-color: #e0e0e0;
+	background-color: #ffd69c;
 	background-repeat: repeat;
 	font-family: 'Rubik', sans-serif;
+background: #232526;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+overflow: hidden;
+
+  background-attachment: fixed;
 }
 #main-flex-menu {
 	display: flex;
@@ -20,7 +26,7 @@ body {
 	justify-content: space-around;
 	width: 100%;
 	height: 45px;
-	background: #ffd69c;
+	background: #e0e0e0;
 	box-sizing: border-box;
 	border-left: solid 4px #e48148; 
 	border-right: solid 4px #e48148;
@@ -78,11 +84,12 @@ body {
 	width: 250px;
 	height: 100%;
 	background: #ebebeb;
-	transition: background 0.2s;
+	transition: background 0.2s, box-shadow 0.15s;
 	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);  
 }
 #flex-language:hover {
 	background: #cccccc;
+	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .1);  
 }
 #icon {
 	transform: Scale(1.5, 1.5);
@@ -146,14 +153,14 @@ body {
 	background: BLACK;
 	opacity: 0;
 	z-index: 2;
-	animation: page-load 1s;
+	animation: page-load 1.5s;
 	pointer-events: none;
 }
 #dropdown-content li:hover {
-	background-color: #f1f1f1
+	background-color: #f1f1f1;
 }
 #dropdown:hover #dropdown-content {
-  display: block;
+	display: block;
 }
 @keyframes menu-load {
 	from {transform: translateY(-300%);}
@@ -172,14 +179,34 @@ body {
 	height:100%;
 }
 #main-content {
+	box-sizing:border-box;
+	padding: 0px;
+		top:0px;
 	position: relative;
 	min-width: 75%;
 	min-height: 800px;
-	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);   
+/*	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);   
     border-radius: 5px;
     background-color: rgba(255, 255, 255, .35);
+	
+   color: white;
+   text-shadow:
+       3px 3px 0 #333,
+     -1px -1px 0 #333,  
+      1px -1px 0 #333,
+      -1px 1px 0 #333,
+       1px 1px 0 #333;
     
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); */
+}
+iframe {
+	border: solid 0px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+	height: 80%;
+box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .6);
 }
 @media screen and (max-width: 580px) {
     #flex-links {
@@ -191,6 +218,8 @@ body {
 		align-content: space-between;
 		justify-content: space-around;
     }
+	#main-content {
+	}
 	#flex-links-box {
         width: 100%;
 		display: flex;

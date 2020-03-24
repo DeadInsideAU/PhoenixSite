@@ -5,7 +5,9 @@ function langMenuAppear() {
 			document.getElementById("Lang-Select-Menu").style.transform = "translate(-50%, -50%)";
 		}, 100);
 }
-
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+  }
 function langEng() {
 	alert("Possibly make a link like, 'Website.eng.net or Website.kor.net or Website.jap.net' kind of thing");
 }
