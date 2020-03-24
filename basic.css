@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("sunbackground.png");
+	background-color: ORANGE;
+	background-repeat: repeat;
+	font-family: 'Rubik', sans-serif;
+}
+#main-flex-menu {
+	display: flex;
+	align-items: center;
+	align-content: space-between;
+	justify-content: space-around;
+	width: 100%;
+	height: 45px;
+	background: #e0e0e0;
+	box-sizing: border-box;
+	border-left: solid 4px #e48148; 
+	border-right: solid 4px #e48148;
+	animation: menu-load 0.6s;
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+	z-index: 999;
+}
+#flex-link-menu {
+	display: flex;
+	align-items: center;
+	align-content: space-between;
+	justify-content: flex-start;
+	padding-left: 5%;
+	width: 75%;
+	height: 55px;
+	background: #e48148;
+	border-bottom: solid 1px black;
+	box-sizing: border-box;
+}
+#flex-links-box {
+	display: flex;
+	height: 100%;
+	width: 40%;
+	align-items: center;
+	align-content: space-between;
+	justify-content: space-between;
+}
+#flex-links {
+	display: flex;
+	align-items: center;
+	align-content: space-between;
+	justify-content: flex-start;
+	width: 80%;
+	height: 100%;
+	background: #e48148;
+	border-bottom: solid 1px black;
+}
+#flex-logo {
+	display: flex;
+	align-items: center;
+	align-content: space-between;
+	justify-content: space-around;
+	width: 250px;
+	height: 100%;
+	background: #ebebeb;
+}
+#flex-language {
+	display: flex;
+	align-items: center;
+	align-content: space-between;
+	justify-content: space-around;
+	width: 250px;
+	height: 100%;
+	background: #ebebeb;
+	transition: background 0.2s;
+	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);  
+}
+#flex-language:hover {
+	background: #cccccc;
+}
+#icon {
+	transform: Scale(1.5, 1.5);
+}
+#Lang-Select-Menu {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -300%);
+	
+	background: WHITE;
+	width: 25%;
+	height: 50%;
+	z-index: -1;
+	
+	display: none;
+	align-content: space-between;
+	align-items: center;
+	justify-content: center;
+	transition: transform 0.6s, opacity 0.6s, display 0.6s;
+}
+.flex-buttons {
+	display: flex;
+	align-content: space-between;
+	align-items: center;
+	justify-content: center;
+	width: 20%;
+	height: 100%;
+	color: white;
+	box-sizing: border-box;
+	border-bottom: solid 3px WHITE;
+	transition: background 0.5s;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.flex-buttons:hover {
+	background: #bf6c3b;
+}
+#dropdown {
+	position: relative;
+	display: inline-block;
+	height: 100%;
+}
+#dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+#dropdown-content li {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+#overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: BLACK;
+	opacity: 0;
+	z-index: 2;
+	animation: page-load 1s;
+	pointer-events: none;
+}
+#dropdown-content li:hover {
+	background-color: #f1f1f1
+}
+#dropdown:hover #dropdown-content {
+  display: block;
+}
+@keyframes menu-load {
+	from {transform: translateY(-300%);}
+	to {transform: translateY(0%);}
+}
+@keyframes page-load {
+	from {opacity: 1;}
+	to {opacity: 0; visibility:hidden;}
+}
+#main-div {
+	display: flex;
+	align-items: center;
+	align-content: space-between;
+	justify-content: space-around;
+	width: 100%;
+	height:100%;
+}
+#main-content {
+	position: relative;
+	min-width: 75%;
+	min-height: 800px;
+	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);   
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .35);
+    
+    backdrop-filter: blur(5px);
+}
+@media screen and (max-width: 580px) {
+    #flex-links {
+        width: 100%;
+		display: flex;
+		padding: 0px;
+		margin: 0px;
+		align-items: center;
+		align-content: space-between;
+		justify-content: space-around;
+    }
+	#flex-links-box {
+        width: 100%;
+		display: flex;
+		padding: 0px;
+		margin: 0px;
+		align-items: center;
+		align-content: space-between;
+		justify-content: space-around;
+    }
+	#flex-link-menu {
+		display: flex;
+		padding: 0px;
+		margin: 0px;
+		align-items: center;
+		align-content: space-between;
+		justify-content: space-around;
+}
+	.flex-buttons {
+		width: 200px;
+	}
+	#flex-language {
+		width: 50px;
+	}
+}
