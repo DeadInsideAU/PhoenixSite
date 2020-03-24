@@ -9,8 +9,7 @@ body {
 	padding: 0;
 	width: 100%;
 	height: 100%;
-	background-image: url("background.png");
-	background-color: ORANGE;
+	background-color: #ffd69c;
 	background-repeat: repeat;
 	font-family: 'Rubik', sans-serif;
 }
